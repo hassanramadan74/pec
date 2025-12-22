@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Vacancies = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const isArabic = i18n.language === "ar";
   const fontClass = isArabic ? "font-cairo" : "font-primary";
   const direction = isArabic ? "rtl" : "ltr";
 
   const [selectedDepartment, setSelectedDepartment] = useState("all");
   const [selectedLocation, setSelectedLocation] = useState("all");
-  const [selectedJob, setSelectedJob] = useState(null);
-  const [showApplicationForm, setShowApplicationForm] = useState(false);
+  // const [selectedJob, setSelectedJob] = useState(null);
+  // const [showApplicationForm, setShowApplicationForm] = useState(false);
 
   // Job listings data
   const jobs = [
@@ -85,9 +87,12 @@ const Vacancies = () => {
     return true;
   });
 
-  const handleApply = (job) => {
-    setSelectedJob(job);
-    setShowApplicationForm(true);
+  const handleApply = () => {
+    // Navigate to contact page instead of showing modal
+    navigate("/contact");
+    // Commented out modal functionality
+    // setSelectedJob(job);
+    // setShowApplicationForm(true);
   };
 
   return (
@@ -300,8 +305,8 @@ const Vacancies = () => {
         </section>
       </div>
 
-      {/* Application Modal */}
-      {showApplicationForm && selectedJob && (
+      {/* Application Modal - Commented Out */}
+      {/* {showApplicationForm && selectedJob && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <div
             className={`bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto ${fontClass}`}
@@ -443,7 +448,7 @@ const Vacancies = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

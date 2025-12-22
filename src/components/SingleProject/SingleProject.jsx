@@ -84,7 +84,10 @@ const SingleProject = () => {
             <img
               src={selectedImage}
               alt={t(project.titleKey)}
+              loading="eager"
+              decoding="async"
               className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+              style={{ imageRendering: "auto" }}
             />
             {/* Image Overlay on Hover */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
@@ -106,7 +109,10 @@ const SingleProject = () => {
               <img
                 src={image}
                 alt={`${t(project.titleKey)} - ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-[120px] md:h-[160px] lg:h-[200px] object-cover"
+                style={{ imageRendering: "auto" }}
               />
               {/* Selected Indicator */}
               {selectedImage === image && (

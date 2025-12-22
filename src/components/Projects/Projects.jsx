@@ -45,11 +45,14 @@ function Projects() {
               <img
                 src={project.mainImage}
                 alt={t(project.projectOwner)}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                style={{ imageRendering: "auto" }}
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                 <h2 className="text-white uppercase text-2xl md:text-3xl lg:text-4xl font-bold px-6 text-center">
-                  {t(project.projectOwner)}
+                  {t(project.title)}
                 </h2>
               </div>
             </Link>

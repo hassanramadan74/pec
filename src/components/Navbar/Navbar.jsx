@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import arabicBosta from "../../assets/pec.png";
+import pecLogo from "../../assets/pec.png";
 
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -68,8 +68,7 @@ const Navbar = () => {
               <Link
                 to="https://linkedin.com"
                 target="_blank"
-                className={`hover:text-[#00b4d8] transition-all duration-300 
-                }`}
+                className="hover:text-[#00b4d8] transition-all duration-300"
               >
                 <i className="fa-brands fa-linkedin"></i>
               </Link>
@@ -126,19 +125,13 @@ const Navbar = () => {
         <section>
           <div className="lg:container lg:px-0 px-6 text-[16px] flex justify-between text-white items-center lg:space-x-4 py-[8px]">
             <div className={`${isArabic ? "pr-4" : "pr-0"}`}>
-              {isArabic ? (
-                <Link to="/">
-                  <img
-                    src={arabicBosta}
-                    alt="Arabic Bosta Logo"
-                    className="w-32"
-                  />
-                </Link>
-              ) : (
-                <Link to="/">
-                  <img src={arabicBosta} alt="Bosta Logo" className="w-32" />
-                </Link>
-              )}
+              <Link to="/">
+                <img
+                  src={pecLogo}
+                  alt="PEC Professionals Engineering Consultancy"
+                  className="w-40 hover:opacity-90 transition-opacity duration-300"
+                />
+              </Link>
             </div>
             {/* MOBILE HAMBURGER */}
             <div className="lg:hidden pr-4">
@@ -162,23 +155,13 @@ const Navbar = () => {
               {/* Close Button */}
               <div className="flex justify-between">
                 <div>
-                  {isArabic ? (
-                    <Link to="/">
-                      <img
-                        src={arabicBosta}
-                        alt="Arabic Bosta Logo"
-                        className="w-40"
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="/">
-                      <img
-                        src={arabicBosta}
-                        alt="Bosta Logo"
-                        className="w-40"
-                      />
-                    </Link>
-                  )}
+                  <Link to="/">
+                    <img
+                      src={pecLogo}
+                      alt="PEC Professionals Engineering Consultancy"
+                      className="w-48"
+                    />
+                  </Link>
                 </div>
                 <button
                   onClick={() => setDrawerOpen(false)}
