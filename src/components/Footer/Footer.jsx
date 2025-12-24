@@ -17,7 +17,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Logo & Description */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="Madar Al-Jazeera" className="w-48 mb-4" />
+            <img
+              src={logo}
+              alt="Madar Al-Jazeera"
+              className="lg:w-56 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(0,180,220)] transition-all duration-500 ease-in-out filter brightness-150"
+            />
             <p className="text-sm leading-relaxed opacity-90">
               {t("footer.description")}
             </p>
@@ -25,34 +29,11 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-6">
               <Link
-                to="https://instagram.com"
-                target="_blank"
-                className={`hover:text-[#00b4d8] transition-all duration-300 text-xl ${
-                  isArabic ? "ml-4" : ""
-                }`}
-              >
-                <i className="fa-brands fa-instagram"></i>
-              </Link>
-              <Link
-                to="https://linkedin.com"
+                to="https://www.linkedin.com/company/pec-professionals-engineering-consultant/about/?viewAsMember=true"
                 target="_blank"
                 className="hover:text-[#00b4d8] transition-all duration-300 text-xl"
               >
                 <i className="fa-brands fa-linkedin"></i>
-              </Link>
-              <Link
-                to="https://twitter.com"
-                target="_blank"
-                className="hover:text-[#00b4d8] transition-all duration-300 text-xl"
-              >
-                <i className="fa-brands fa-x-twitter"></i>
-              </Link>
-              <Link
-                to="https://facebook.com"
-                target="_blank"
-                className="hover:text-[#00b4d8] transition-all duration-300 text-xl"
-              >
-                <i className="fa-brands fa-facebook"></i>
               </Link>
             </div>
           </div>

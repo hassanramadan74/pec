@@ -18,6 +18,7 @@ const Navbar = () => {
   };
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -54,39 +55,17 @@ const Navbar = () => {
       >
         <section className="lg:container py-[5px] lg:px-0 px-6">
           <div className="text-white flex justify-between items-center">
-            <div className="flex items-center space-x-4 text-xl">
+            <div
+              className={`flex  items-center text-xl ${
+                isArabic ? "pr-[108]" : "ml-[108px]"
+              }`}
+            >
               <Link
-                to="https://instagram.com"
-                target="_blank"
-                className={`hover:text-[#00b4d8] transition-all duration-300 ${
-                  isArabic ? "mx-[24px]" : "mx-[0px]"
-                }`}
-              >
-                <i className="fa-brands fa-instagram"></i>
-              </Link>
-
-              <Link
-                to="https://linkedin.com"
+                to="https://www.linkedin.com/company/pec-professionals-engineering-consultant/about/?viewAsMember=true"
                 target="_blank"
                 className="hover:text-[#00b4d8] transition-all duration-300"
               >
                 <i className="fa-brands fa-linkedin"></i>
-              </Link>
-
-              <Link
-                to="https://twitter.com"
-                target="_blank"
-                className="hover:text-[#00b4d8] transition-all duration-300"
-              >
-                <i className="fa-brands fa-x-twitter"></i>
-              </Link>
-
-              <Link
-                to="https://facebook.com"
-                target="_blank"
-                className="hover:text-[#00b4d8] transition-all duration-300"
-              >
-                <i className="fa-brands fa-facebook"></i>
               </Link>
             </div>
 
@@ -125,11 +104,11 @@ const Navbar = () => {
         <section>
           <div className="lg:container lg:px-0 px-6 text-[16px] flex justify-between text-white items-center lg:space-x-4 py-[8px]">
             <div className={`${isArabic ? "pr-4" : "pr-0"}`}>
-              <Link to="/">
+              <Link to="/" className="block">
                 <img
                   src={pecLogo}
                   alt="PEC Professionals Engineering Consultancy"
-                  className="w-40 hover:opacity-90 transition-opacity duration-300"
+                  className="lg:w-56 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(0,180,220)] transition-all duration-500 ease-in-out filter brightness-200"
                 />
               </Link>
             </div>

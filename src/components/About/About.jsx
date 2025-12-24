@@ -6,14 +6,9 @@ import { projectsData } from "../../data/projects";
 const About = () => {
   const { t, i18n } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [openFAQ, setOpenFAQ] = useState(null);
   const [countersStarted, setCountersStarted] = useState(false);
   const [counts, setCounts] = useState({
     employees: 0,
-    countries: 0,
-    projects: 0,
-    offices: 0,
-    awards: 0,
   });
   const countersRef = useRef(null);
   const fontClass = i18n.language === "ar" ? "font-cairo" : "font-primary";
@@ -43,11 +38,7 @@ const About = () => {
 
   const animateCounters = () => {
     const targets = {
-      employees: 100,
-      countries: 15,
-      projects: 60,
-      offices: 30,
-      awards: 25,
+      employees: 18,
     };
 
     const duration = 2000;
@@ -231,7 +222,7 @@ const About = () => {
         dir={direction}
       >
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+          <div className="flex justify-center">
             {/* Employees */}
             <div className="text-center">
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2817] mb-2">
@@ -239,46 +230,6 @@ const About = () => {
               </h3>
               <p className="text-gray-700 text-sm md:text-base">
                 {t("about.stats.employees")}
-              </p>
-            </div>
-
-            {/* Countries */}
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2817] mb-2">
-                {counts.countries}+
-              </h3>
-              <p className="text-gray-700 text-sm md:text-base">
-                {t("about.stats.countries")}
-              </p>
-            </div>
-
-            {/* Projects */}
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2817] mb-2">
-                {counts.projects}+
-              </h3>
-              <p className="text-gray-700 text-sm md:text-base">
-                {t("about.stats.projects")}
-              </p>
-            </div>
-
-            {/* Offices */}
-            <div className="text-center">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2817] mb-2">
-                {counts.offices}+
-              </h3>
-              <p className="text-gray-700 text-sm md:text-base">
-                {t("about.stats.offices")}
-              </p>
-            </div>
-
-            {/* Awards */}
-            <div className="text-center col-span-2 md:col-span-3 lg:col-span-1">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2817] mb-2">
-                {counts.awards}+
-              </h3>
-              <p className="text-gray-700 text-sm md:text-base">
-                {t("about.stats.awards")}
               </p>
             </div>
           </div>
@@ -348,24 +299,12 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80"
-                  alt={t("about.journey.excellence.title")}
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+                  alt={t("about.journey.clientCentric.title")}
                   className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-lg"
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                  {t("about.journey.inception.title")}
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  {t("about.journey.inception.description")}
-                </p>
-              </div>
-            </div>
-
-            {/* Client-Centric Approach */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
                   {t("about.journey.clientCentric.title")}
                 </h3>
@@ -373,63 +312,7 @@ const About = () => {
                   {t("about.journey.clientCentric.description")}
                 </p>
               </div>
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
-                  alt={t("about.journey.clientCentric.title")}
-                  className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-lg"
-                />
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section
-        className={`py-16 md:py-24 bg-[#EFF6FF] ${fontClass}`}
-        dir={direction}
-      >
-        <div className="container max-w-5xl">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <p className="text-[#22c55e] text-sm md:text-base font-semibold mb-2">
-              {t("about.faq.subtitle")}
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
-              {t("about.faq.title")}
-            </h2>
-          </div>
-
-          {/* FAQ Items */}
-          <div className="space-y-4">
-            {[1, 2, 3, 4, 5, 6, 7].map((item) => (
-              <div
-                key={item}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenFAQ(openFAQ === item ? null : item)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <span className="text-gray-800 font-medium text-sm md:text-base">
-                    {t(`about.faq.q${item}.question`)}
-                  </span>
-                  <i
-                    className={`fa-solid fa-chevron-down transition-transform duration-300 text-gray-600 ${
-                      openFAQ === item ? "rotate-180" : ""
-                    }`}
-                  ></i>
-                </button>
-                {openFAQ === item && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                      {t(`about.faq.q${item}.answer`)}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>

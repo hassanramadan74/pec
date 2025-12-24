@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -9,83 +8,109 @@ const Vacancies = () => {
   const fontClass = isArabic ? "font-cairo" : "font-primary";
   const direction = isArabic ? "rtl" : "ltr";
 
-  const [selectedDepartment, setSelectedDepartment] = useState("all");
-  const [selectedLocation, setSelectedLocation] = useState("all");
-  // const [selectedJob, setSelectedJob] = useState(null);
-  // const [showApplicationForm, setShowApplicationForm] = useState(false);
-
-  // Job listings data
+  // Job listings data - All positions in Cairo
   const jobs = [
     {
       id: 1,
-      titleKey: "vacancies.jobs.civilEngineer.title",
+      titleKey: "vacancies.jobs.architecturalDesign.title",
       department: "engineering",
-      location: "riyadh",
+      location: "cairo",
       type: "full-time",
       experience: "3-5",
-      descriptionKey: "vacancies.jobs.civilEngineer.description",
-      requirementsKey: "vacancies.jobs.civilEngineer.requirements",
+      descriptionKey: "vacancies.jobs.architecturalDesign.description",
+      requirementsKey: "vacancies.jobs.architecturalDesign.requirements",
     },
     {
       id: 2,
-      titleKey: "vacancies.jobs.projectManager.title",
-      department: "management",
-      location: "makkah",
-      type: "full-time",
-      experience: "5-8",
-      descriptionKey: "vacancies.jobs.projectManager.description",
-      requirementsKey: "vacancies.jobs.projectManager.requirements",
-    },
-    {
-      id: 3,
-      titleKey: "vacancies.jobs.safetyOfficer.title",
-      department: "safety",
+      titleKey: "vacancies.jobs.architecturalDrawing.title",
+      department: "engineering",
       location: "cairo",
       type: "full-time",
       experience: "2-4",
-      descriptionKey: "vacancies.jobs.safetyOfficer.description",
-      requirementsKey: "vacancies.jobs.safetyOfficer.requirements",
+      descriptionKey: "vacancies.jobs.architecturalDrawing.description",
+      requirementsKey: "vacancies.jobs.architecturalDrawing.requirements",
+    },
+    {
+      id: 3,
+      titleKey: "vacancies.jobs.structuralConcrete.title",
+      department: "engineering",
+      location: "cairo",
+      type: "full-time",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.structuralConcrete.description",
+      requirementsKey: "vacancies.jobs.structuralConcrete.requirements",
     },
     {
       id: 4,
-      titleKey: "vacancies.jobs.architect.title",
+      titleKey: "vacancies.jobs.structuralSteel.title",
       department: "engineering",
-      location: "riyadh",
+      location: "cairo",
       type: "full-time",
-      experience: "4-6",
-      descriptionKey: "vacancies.jobs.architect.description",
-      requirementsKey: "vacancies.jobs.architect.requirements",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.structuralSteel.description",
+      requirementsKey: "vacancies.jobs.structuralSteel.requirements",
     },
     {
       id: 5,
       titleKey: "vacancies.jobs.electricalEngineer.title",
       department: "engineering",
-      location: "makkah",
-      type: "contract",
+      location: "cairo",
+      type: "full-time",
       experience: "3-5",
       descriptionKey: "vacancies.jobs.electricalEngineer.description",
       requirementsKey: "vacancies.jobs.electricalEngineer.requirements",
     },
     {
       id: 6,
-      titleKey: "vacancies.jobs.qaInspector.title",
-      department: "quality",
+      titleKey: "vacancies.jobs.mechanicalEngineer.title",
+      department: "engineering",
+      location: "cairo",
+      type: "full-time",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.mechanicalEngineer.description",
+      requirementsKey: "vacancies.jobs.mechanicalEngineer.requirements",
+    },
+    {
+      id: 7,
+      titleKey: "vacancies.jobs.technicalOffice.title",
+      department: "engineering",
       location: "cairo",
       type: "full-time",
       experience: "2-4",
-      descriptionKey: "vacancies.jobs.qaInspector.description",
-      requirementsKey: "vacancies.jobs.qaInspector.requirements",
+      descriptionKey: "vacancies.jobs.technicalOffice.description",
+      requirementsKey: "vacancies.jobs.technicalOffice.requirements",
+    },
+    {
+      id: 8,
+      titleKey: "vacancies.jobs.architecturalSupervision.title",
+      department: "engineering",
+      location: "cairo",
+      type: "full-time",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.architecturalSupervision.description",
+      requirementsKey: "vacancies.jobs.architecturalSupervision.requirements",
+    },
+    {
+      id: 9,
+      titleKey: "vacancies.jobs.structuralSupervision.title",
+      department: "engineering",
+      location: "cairo",
+      type: "full-time",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.structuralSupervision.description",
+      requirementsKey: "vacancies.jobs.structuralSupervision.requirements",
+    },
+    {
+      id: 10,
+      titleKey: "vacancies.jobs.mechanicalSupervision.title",
+      department: "engineering",
+      location: "cairo",
+      type: "full-time",
+      experience: "3-5",
+      descriptionKey: "vacancies.jobs.mechanicalSupervision.description",
+      requirementsKey: "vacancies.jobs.mechanicalSupervision.requirements",
     },
   ];
-
-  // Filter jobs based on selected criteria
-  const filteredJobs = jobs.filter((job) => {
-    if (selectedDepartment !== "all" && job.department !== selectedDepartment)
-      return false;
-    if (selectedLocation !== "all" && job.location !== selectedLocation)
-      return false;
-    return true;
-  });
 
   const handleApply = () => {
     // Navigate to contact page instead of showing modal
@@ -110,86 +135,23 @@ const Vacancies = () => {
           </div>
         </section>
 
-        {/* Filters Section */}
-        <section className="bg-gray-50 py-8">
-          <div className="container">
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              {/* Department Filter */}
-              <div className="w-full md:w-auto">
-                <select
-                  value={selectedDepartment}
-                  onChange={(e) => setSelectedDepartment(e.target.value)}
-                  className="w-full px-6 py-3 rounded-lg border-2 border-gray-300 focus:border-[#076380] focus:outline-none text-gray-700"
-                >
-                  <option value="all">
-                    {t("vacancies.filters.allDepartments")}
-                  </option>
-                  <option value="engineering">
-                    {t("vacancies.filters.engineering")}
-                  </option>
-                  <option value="management">
-                    {t("vacancies.filters.management")}
-                  </option>
-                  <option value="safety">
-                    {t("vacancies.filters.safety")}
-                  </option>
-                  <option value="quality">
-                    {t("vacancies.filters.quality")}
-                  </option>
-                </select>
-              </div>
-
-              {/* Location Filter */}
-              <div className="w-full md:w-auto">
-                <select
-                  value={selectedLocation}
-                  onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="w-full px-6 py-3 rounded-lg border-2 border-gray-300 focus:border-[#076380] focus:outline-none text-gray-700"
-                >
-                  <option value="all">
-                    {t("vacancies.filters.allLocations")}
-                  </option>
-                  <option value="riyadh">
-                    {t("vacancies.filters.riyadh")}
-                  </option>
-                  <option value="makkah">
-                    {t("vacancies.filters.makkah")}
-                  </option>
-                  <option value="cairo">{t("vacancies.filters.cairo")}</option>
-                </select>
-              </div>
-
-              {/* Reset Button */}
-              <button
-                onClick={() => {
-                  setSelectedDepartment("all");
-                  setSelectedLocation("all");
-                }}
-                className="w-full md:w-auto px-6 py-3 bg-[#E30613] text-white rounded-lg hover:bg-[#c20511] transition-colors duration-300 font-semibold"
-              >
-                {t("vacancies.filters.reset")}
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Job Listings */}
         <section className="py-16">
           <div className="container">
             <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-                {t("vacancies.availablePositions")} ({filteredJobs.length})
+                {t("vacancies.availablePositions")} ({jobs.length})
               </h2>
             </div>
 
-            {filteredJobs.length === 0 ? (
+            {jobs.length === 0 ? (
               <div className="text-center py-16">
                 <i className="fa-solid fa-briefcase text-6xl text-gray-300 mb-4"></i>
                 <p className="text-xl text-gray-500">{t("vacancies.noJobs")}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {filteredJobs.map((job) => (
+                {jobs.map((job) => (
                   <div
                     key={job.id}
                     className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200"
@@ -221,13 +183,9 @@ const Vacancies = () => {
                           <i className="fa-solid fa-clock mr-1"></i>
                           {t(`vacancies.types.${job.type}`)}
                         </span>
-                        <span>
-                          <i className="fa-solid fa-briefcase mr-1"></i>
-                          {job.experience} {t("vacancies.years")}
-                        </span>
                       </div>
                       <button
-                        onClick={() => handleApply(job)}
+                        onClick={handleApply}
                         className="px-6 py-2 bg-[#E30613] text-white rounded-lg hover:bg-[#c20511] transition-colors duration-300 font-semibold"
                       >
                         {t("vacancies.applyNow")}
@@ -242,16 +200,10 @@ const Vacancies = () => {
 
         {/* Why Join Us Section */}
         <section className="bg-[#F5F1E8] py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {t("vacancies.whyJoin.title")}
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                {t("vacancies.whyJoin.subtitle")}
-              </p>
-            </div>
-
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">
+              {t("vacancies.whyJoin.title")}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center p-6 bg-white rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-[#076380] rounded-full flex items-center justify-center mx-auto mb-4">

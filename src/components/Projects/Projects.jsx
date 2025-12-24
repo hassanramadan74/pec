@@ -1,12 +1,25 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import projectsBg from "../../assets/projects.webp";
 import { projectsData } from "../../data/projects";
+import { preloadImages } from "../../hooks/useImageCache";
+import CachedImage from "../CachedImage/CachedImage";
 
 function Projects() {
   const { t, i18n } = useTranslation();
   const fontClass = i18n.language === "ar" ? "font-cairo" : "font-primary";
   const direction = i18n.language === "ar" ? "rtl" : "ltr";
+
+  // Preload all project images on component mount
+  useEffect(() => {
+    const allImages = projectsData.flatMap((project) => [
+      project.mainImage,
+      project.secondImage,
+      project.thirdImage,
+    ]);
+    preloadImages(allImages);
+  }, []);
 
   return (
     <section>
@@ -42,11 +55,10 @@ function Projects() {
               to={`/projects/${project.id}`}
               className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer h-[300px] md:h-[400px] block"
             >
-              <img
+              <CachedImage
                 src={project.mainImage}
                 alt={t(project.projectOwner)}
                 loading="lazy"
-                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 style={{ imageRendering: "auto" }}
               />

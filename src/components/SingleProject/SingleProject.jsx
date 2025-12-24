@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projectsData } from "../../data/projects";
+import { preloadImages } from "../../hooks/useImageCache";
+import CachedImage from "../CachedImage/CachedImage";
 // import projectsBg from "../../assets/projects.webp";
 
 const SingleProject = () => {
@@ -15,6 +17,18 @@ const SingleProject = () => {
 
   // State for selected image
   const [selectedImage, setSelectedImage] = useState(project?.mainImage || "");
+
+  // Preload project images
+  useEffect(() => {
+    if (project) {
+      const images = [
+        project.mainImage,
+        project.secondImage,
+        project.thirdImage,
+      ];
+      preloadImages(images);
+    }
+  }, [project]);
 
   if (!project) {
     return (
@@ -81,11 +95,10 @@ const SingleProject = () => {
         {/* Main Large Image with Zoom Effect */}
         <div className="mb-8 group">
           <div className="relative overflow-hidden rounded-lg shadow-2xl">
-            <img
+            <CachedImage
               src={selectedImage}
               alt={t(project.titleKey)}
               loading="eager"
-              decoding="async"
               className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
               style={{ imageRendering: "auto" }}
             />
@@ -106,11 +119,10 @@ const SingleProject = () => {
                   : "hover:scale-105 hover:shadow-xl"
               }`}
             >
-              <img
+              <CachedImage
                 src={image}
                 alt={`${t(project.titleKey)} - ${index + 1}`}
                 loading="lazy"
-                decoding="async"
                 className="w-full h-[120px] md:h-[160px] lg:h-[200px] object-cover"
                 style={{ imageRendering: "auto" }}
               />
