@@ -38,7 +38,7 @@ const About = () => {
 
   const animateCounters = () => {
     const targets = {
-      employees: 18,
+      employees: 75,
     };
 
     const duration = 2000;

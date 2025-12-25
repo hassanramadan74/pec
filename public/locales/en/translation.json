@@ -246,10 +246,25 @@
         "vacancies.application.phone": "Phone Number",
         "vacancies.application.experience": "Years of Experience",
         "vacancies.application.selectExperience": "Select your experience level",
-        "vacancies.application.resume": "Upload Resume",
+        "vacancies.application.resume": "Resume Link (Google Drive)",
         "vacancies.application.resumeFormat": "Accepted formats: PDF, DOC, DOCX (Max 5MB)",
+        "vacancies.application.resumePlaceholder": "Paste your Google Drive link here",
+        "vacancies.application.resumeLinkNote": "Please share your resume via Google Drive link. Make sure the link is set to 'Anyone with the link can view'.",
+        "vacancies.application.invalidUrl": "Please enter a valid URL",
         "vacancies.application.coverLetter": "Cover Letter (Optional)",
         "vacancies.application.submit": "Submit Application",
-        "vacancies.application.cancel": "Cancel"
+        "vacancies.application.submitting": "Submitting...",
+        "vacancies.application.cancel": "Cancel",
+        "vacancies.application.experienceRequired": "Years of experience is required",
+        "vacancies.application.resumeRequired": "Resume is required",
+        "vacancies.application.experiencePlaceholder": "e.g., 5 years",
+        "vacancies.application.fileSizeNote": "Maximum file size: 5MB. Accepted formats: PDF, DOC, DOCX",
+        "vacancies.application.university": "College/University",
+        "vacancies.application.universityPlaceholder": "e.g., Cairo University",
+        "vacancies.application.universityRequired": "College/University is required",
+        "vacancies.application.successMessage": "Application submitted successfully! We'll review your application and contact you soon.",
+        "vacancies.application.errorMessage": "Failed to submit application. Please try again or email us directly.",
+        "vacancies.application.fileSizeError": "File size must be less than 5MB",
+        "vacancies.application.fileTypeError": "Only PDF, DOC, and DOCX files are allowed"
         
   }

@@ -1,6 +1,20 @@
 export const projectsData = [
   {
     id: 1,
+    title: "Commercial, residential, and administrative compound project",
+    titleKey: "Madinet Nasr",
+    projectOwner: "Group of partners",
+    location: "Madinet Nasr",
+    projectOverview:
+      "Land area 24,000 square meters, building area 280,000 square meters, including: two underground parking levels, 8 residential buildings with 650 units, 2 administrative buildings, and a shopping mall.",
+    pecScope:
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
+    mainImage: "/images/firstProject/mainImage.jpg",
+    secondImage: "/images/firstProject/secondImage.jpg",
+    thirdImage: "/images/firstProject/thirdImage.jpg",
+  },
+  {
+    id: 2,
     title: "Maadi Complex",
     titleKey: "MAADI",
     projectOwner: "Dr. Samia Mustafa  Mahmoud El Gendy",
@@ -8,13 +22,13 @@ export const projectsData = [
     projectOverview:
       "LAND AREA 8475 M2 BUA 80000 M2 CONTAINS ; 2BASEMNT FOR CAR PARKING GR-1ST FLOORS SHOPS 5TYPICAL FLOORS FOr administrative 5TYPICAL FLOORS FOR 180 APARTMENTS",
     pecScope:
-      "architecture DESIGN structure - mep design constructor supervision",
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
     mainImage: "/images/Drsamia/mainImage.jpg",
     secondImage: "/images/Drsamia/secondImage.jpg",
     thirdImage: "/images/Drsamia/thirdImage.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title: "mall in the New Administrative Capital",
     titleKey: "Capital",
     projectOwner: "pyramids  developments",
@@ -27,7 +41,7 @@ export const projectsData = [
     thirdImage: "/images/mool_elasmaa/thirdImage.jpg",
   },
   {
-    id: 3,
+    id: 4,
     title: "mall in the New Administrative Capital",
     titleKey: "Capital",
     projectOwner: "pyramids  developments",
@@ -40,7 +54,7 @@ export const projectsData = [
     thirdImage: "/images/mool_elasmaa_2/thirdImage.jpg",
   },
   {
-    id: 4,
+    id: 5,
     title: "House Club New Administrative Capital",
     titleKey: "Capital",
     projectOwner: "pyramids  developments",
@@ -53,7 +67,7 @@ export const projectsData = [
     thirdImage: "/images/moolryadi/thirdImage.jpg",
   },
   {
-    id: 5,
+    id: 6,
     title: "House Club New Administrative Capital",
     titleKey: "Capital",
     projectOwner: "pyramids  developments",
@@ -66,7 +80,7 @@ export const projectsData = [
     thirdImage: "/images/moolryaddi2/thirdImage.jpg",
   },
   {
-    id: 6,
+    id: 7,
     title: "Crafts Training Center in Upper Egypt",
     titleKey: "Beni Suef",
     projectOwner: "Upper Egypt  Development  Authority",
@@ -74,13 +88,13 @@ export const projectsData = [
     projectOverview:
       "LAND AREA 1200 M2 BUA 2200 M2 CONTAINS ; GR-1ST FLOORS SHOPS",
     pecScope:
-      "architecture DESIGN structure - mep design constructor supervision",
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
     mainImage: "/images/upperegypt2/mainImage.jpg",
     secondImage: "/images/upperegypt2/secondImage.jpg",
     thirdImage: "/images/upperegypt2/thirdImage.jpg",
   },
   {
-    id: 7,
+    id: 8,
     title: "residential, commercial, and administrative building in Matrouh",
     titleKey: "MATROUH",
     projectOwner: "MOT",
@@ -88,13 +102,13 @@ export const projectsData = [
     projectOverview:
       "LAND AREA 1660M2 BUA 12300M2 CONTAINS : ONE BASEMENT FOR CAR BARKING G FLOOR FOR SHOPS 1ST FLOOR FOR OFFICES 6 TYPICAL FLOORS FOR 84 APARTMENTS",
     pecScope:
-      "architecture DESIGN structure - mep design constructor supervision",
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
     mainImage: "/images/mot/mainImage.jpg",
     secondImage: "/images/mot/secondImage.jpg",
     thirdImage: "/images/mot/thirdImage.jpg",
   },
   {
-    id: 8,
+    id: 9,
     title: "Valeria ُ El nasr",
     titleKey: "MAAADI",
     projectOwner: "EL NASR HOUSING AND DEVELOPMENT",
@@ -102,13 +116,13 @@ export const projectsData = [
     projectOverview:
       "LAND AREA 5200 M2 BUA 40000 M2 CONTAINS ; 2BASEMENT FOR CAR PARKING GR-1ST FLOORS SHOPS 8TYPICAL FLOORS FOR 104 APARTMENTS",
     pecScope:
-      "architecture DESIGN structure - mep design constructor supervision",
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
     mainImage: "/images/elnasr/mainImage.jpeg",
     secondImage: "/images/elnasr/secondImage.jpeg",
     thirdImage: "/images/elnasr/thirdImage.jpeg",
   },
   {
-    id: 9,
+    id: 10,
     title: "care housing",
     titleKey: "MAADI",
     projectOwner: "Dr. Samia Mustafa  Mahmoud El Gendy",
@@ -120,7 +134,7 @@ export const projectsData = [
     thirdImage: "/images/drsamia_3/thirdImage.jpg",
   },
   {
-    id: 10,
+    id: 11,
     title: "EL Asalla",
     titleKey: "ZAHRAA EL MAADI",
     projectOwner: "EL ASALLA FOR  MAINTENANCE COMPONY",
@@ -128,13 +142,13 @@ export const projectsData = [
     projectOverview:
       "PLOT AREA 2500 M2 TOTAL BUA 2700 M2 FOR CAR WORKSHOP AND OFFICE AREA",
     pecScope:
-      "architecture DESIGN structure - mep design constructor supervision",
+      "ARCHITECTURE DESIGN STRUCTURE - MEP DESIGN CONSTRUCTION SUPERVISION",
     mainImage: "/images/elasalla_2/mainImage.jpg",
     secondImage: "/images/elasalla_2/secondImage.jpg",
     thirdImage: "/images/elasalla_2/thirdImage.jpg",
   },
   {
-    id: 11,
+    id: 12,
     title: "Residential buildings",
     titleKey: "EL HADAPA",
     projectOwner: "ELNASR HOUSING AND DEVELOPMENT",
@@ -147,7 +161,7 @@ export const projectsData = [
     thirdImage: "/images/elnasr_housing/thirdImage.jpg",
   },
   {
-    id: 12,
+    id: 13,
     title: "New Administrative Capital Bridge",
     titleKey: "administrative capital",
     projectOwner: "engineering authority",
@@ -159,7 +173,7 @@ export const projectsData = [
     thirdImage: "/images/engineering_authority_21/thirdImage.jpg",
   },
   {
-    id: 13,
+    id: 14,
     title: "New Administrative Capital Bus Station",
     titleKey: "Administrative capital",
     projectOwner: "Administrative Capital Company for Urban Development",
@@ -171,53 +185,53 @@ export const projectsData = [
     thirdImage: "/images/elasmaparking/thirdImage.jpg",
   },
   {
-    id: 14,
+    id: 15,
     title: "Al-Ruwaysat Hangars",
     titleKey: "Sharm el shaikh",
     projectOwner: "engineering authority",
     location: "el ruwiesat  sharm el shaikh",
     projectOverview: "plot area 85000m2 33 steel hanger total bua 30000m2",
-    pecScope: "architecture - structure  design constructor supervision",
+    pecScope: "architecture - structure  design CONSTRUCTION supervision",
     mainImage: "/images/ruwiesat/mainImage.jpg",
     secondImage: "/images/ruwiesat/secondImage.jpg",
     thirdImage: "/images/ruwiesat/thirdImage.jpg",
   },
 
   {
-    id: 15,
+    id: 16,
     title: "Arkin Hangers",
     titleKey: "ASWAN",
     projectOwner: "National General Contracting",
     location: "ASWAN",
     projectOverview: "PLOT AREA 22000 M2 TOTAL BUA 6000 M2",
     pecScope:
-      "architecture - structure mep design STEEL SHOP DRAWING constructor supervision",
+      "architecture - structure mep design STEEL SHOP DRAWING CONSTRUCTION supervision",
     mainImage: "/images/national_general_contracting/mainImage.jpg",
     secondImage: "/images/national_general_contracting/secondImage.jpg",
     thirdImage: "/images/national_general_contracting/thirdImage.jpg",
   },
   {
-    id: 16,
+    id: 17,
     title: "Villas",
     titleKey: "Suez Road",
     projectOwner: "Dr. Kamal Abu  Al-Hasab",
     location: "Suez Road,  Gardenia Compound",
     projectOverview:
       "LAND AREA 535 M2 BUA 470 M2 CONTAINS ; GR-1ST FLOORS roof floor",
-    pecScope: "Landscape design facade design constructor supervision",
+    pecScope: "Landscape design facade design CONSTRUCTION supervision",
     mainImage: "/images/drkamal/mainImage.jpg",
     secondImage: "/images/drkamal/secondImage.jpg",
     thirdImage: "/images/drkamal/thirdImage.jpg",
   },
   {
-    id: 17,
+    id: 18,
     title: "interior design",
     titleKey: "Suez Road",
     projectOwner: "Dr. Kamal Abu  Al-Hasab",
     location: "Suez Road,  Gardenia Compound",
     projectOverview:
       "LAND AREA 535 M2 BUA 470 M2 CONTAINS ; GR-1ST FLOORS roof floor",
-    pecScope: "interior design constructor supervision",
+    pecScope: "interior design CONSTRUCTION supervision",
     mainImage: "/images/drkamal2/mainImage.jpg",
     secondImage: "/images/drkamal2/secondImage.jpg",
     thirdImage: "/images/drkamal2/thirdImage.jpg",

@@ -1,22 +1,6 @@
 export const servicesData = [
   {
     id: 1,
-    titleKey: "services.projectManagement.title",
-    descriptionKey: "services.projectManagement.description",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    category: "projectManagement",
-  },
-  {
-    id: 2,
-    titleKey: "services.mepDesign.title",
-    descriptionKey: "services.mepDesign.description",
-    image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-    category: "mepDesign",
-  },
-  {
-    id: 3,
     titleKey: "services.architectureDesign.title",
     descriptionKey: "services.architectureDesign.description",
     image:
@@ -24,15 +8,23 @@ export const servicesData = [
     category: "architectureDesign",
   },
   {
-    id: 4,
-    titleKey: "services.constructionSupervision.title",
-    descriptionKey: "services.constructionSupervision.description",
+    id: 2,
+    titleKey: "services.structureDesign.title",
+    descriptionKey: "services.structureDesign.description",
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80",
-    category: "constructionSupervision",
+      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80",
+    category: "structureDesign",
   },
   {
-    id: 5,
+    id: 3,
+    titleKey: "services.mepDesign.title",
+    descriptionKey: "services.mepDesign.description",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    category: "mepDesign",
+  },
+  {
+    id: 4,
     titleKey: "services.urbanPlanning.title",
     descriptionKey: "services.urbanPlanning.description",
     image:
@@ -40,11 +32,19 @@ export const servicesData = [
     category: "urbanPlanning",
   },
   {
-    id: 6,
-    titleKey: "services.structureDesign.title",
-    descriptionKey: "services.structureDesign.description",
+    id: 5,
+    titleKey: "services.constructionSupervision.title",
+    descriptionKey: "services.constructionSupervision.description",
     image:
-      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80",
-    category: "structureDesign",
+      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80",
+    category: "constructionSupervision",
+  },
+  {
+    id: 6,
+    titleKey: "services.projectManagement.title",
+    descriptionKey: "services.projectManagement.description",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    category: "projectManagement",
   },
 ];

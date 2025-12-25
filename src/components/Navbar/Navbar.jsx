@@ -105,11 +105,14 @@ const Navbar = () => {
           <div className="lg:container lg:px-0 px-6 text-[16px] flex justify-between text-white items-center lg:space-x-4 py-[8px]">
             <div className={`${isArabic ? "pr-4" : "pr-0"}`}>
               <Link to="/" className="block">
-                <img
-                  src={pecLogo}
-                  alt="PEC Professionals Engineering Consultancy"
-                  className="lg:w-56 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(0,180,220)] transition-all duration-500 ease-in-out filter brightness-200"
-                />
+                <div className="relative p-3 rounded-lg overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#076380] opacity-35"></div>
+                  <img
+                    src={pecLogo}
+                    alt="PEC Professionals Engineering Consultancy"
+                    className="lg:w-48 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(0,180,220)] transition-all duration-500 ease-in-out filter brightness-200 relative z-10"
+                  />
+                </div>
               </Link>
             </div>
             {/* MOBILE HAMBURGER */}
