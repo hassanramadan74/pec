@@ -24,7 +24,7 @@ function Projects() {
   return (
     <section>
       <div
-        className={`relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[500px] flex items-center justify-center ${fontClass}`}
+        className={`relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[600px] flex items-center justify-center ${fontClass}`}
         dir={direction}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${projectsBg})`,
