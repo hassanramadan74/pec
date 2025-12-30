@@ -106,11 +106,11 @@ const Navbar = () => {
             <div className={`${isArabic ? "pr-4" : "pr-0"}`}>
               <Link to="/" className="block">
                 <div className="relative p-3 rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#076380] opacity-35"></div>
+                  <div className="absolute inset-0  bg-white "></div>
                   <img
                     src={pecLogo}
                     alt="PEC Professionals Engineering Consultancy"
-                    className="lg:w-48 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(0,180,220)] transition-all duration-500 ease-in-out filter brightness-200 relative z-10"
+                    className="lg:w-48 w-40 hover:scale-110 drop-shadow-[0px_0px_20px_rgba(255,255,255)] transition-all duration-500 ease-in-out filter brightness-200 relative z-10"
                   />
                 </div>
               </Link>
